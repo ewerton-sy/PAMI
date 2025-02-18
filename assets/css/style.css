@@ -1,3 +1,6 @@
+*{
+    outline: 1px;
+}
 :root {
     --primary-color: #8704BF;
     --secondary-color: #04BFBF;
