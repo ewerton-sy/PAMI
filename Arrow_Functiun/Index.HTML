@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relogio</title>
+</head>
+<body>
+    
+    <Script>
+        let Horas = 0;
+        let Minutos = 0;
+        let Segundos = 0;
+        let timer = document.createElement('h1');
+        timer.style.fontSize = '100px'
+
+
+        setInterval(() => {
+            Segundos++;
+            if (Segundos % 2 == 0) 
+                document.querySelector('body').style.backgroundColor = 'green';
+            else
+                document.querySelector('body').style.backgroundColor = 'yellow';
+
+                if (Segundos > 59){
+                    Minutos++;
+                    Segundos = 0;
+                }
+                if (Minutos > 59){
+                    Horas++;
+                    Minutos = 0;
+                }
+                if (Horas > 23){
+                    Horas++;
+                    Horas = 0;
+                }
+           
+            timer.innerText = Horas + ':' + Minutos + ':' + Segundos;
+        }, 1000);
+        
+        document.querySelector('body').appendChild(timer);
+
+    </Script>
+
+</body>
+</html>

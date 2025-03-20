@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bytesized&display=swap" rel="stylesheet">
+    <title>Estacionamento</title>
+</head>
+<body>
+    <button onclick = "addVeiculo1()">Fusca</button>
+    <button onclick = "addVeiculo2()">Corvette</button>
+    <button onclick = "addVeiculo3()">Uno Fire</button>
+    <button onclick = "addVeiculo4()">Brasília</button>
+
+
+    <div id="Estacionamento"></div>
+
+    <Script>
+        function addVeiculo1(){
+            let veiculo_1 = document.createElement('h1');
+            veiculo_1.innerText = 'Fusca';
+            veiculo_1.style.color = 'Black';
+            veiculo_1.style.backgroundColor = 'cyan';
+            veiculo_1.style.fontSize = '30px';
+            veiculo_1.style.fontFamily = 'Bytesized';
+
+            let foto = document.createElement('img');
+            foto.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShOsBj2MaeR38RI8lcpQklpeN9oWxq12-wag&s')
+
+            document.querySelector('#Estacionamento').appendChild(veiculo_1);
+        }
+
+        function addVeiculo2(){
+            let veiculo_2 = document.createElement('h1');
+            veiculo_2.innerText = 'Corvette';
+            veiculo_2.style.color = 'Black';
+            veiculo_2.style.backgroundColor = 'blue';
+            veiculo_2.style.fontSize = '30px';
+            veiculo_2.style.fontFamily = 'Bytesized';
+
+            document.querySelector('#Estacionamento').appendChild(veiculo_2);
+
+            let foto = document.createElement('img');
+            foto.setAttribute('src', 'https://revistafullpower.com.br/wp-content/uploads/2024/05/corvette-yenko-04-1024x637.jpg');
+        }
+
+        function addVeiculo3(){
+            let veiculo_3 = document.createElement('h1');
+            veiculo_3.innerText = 'Uno Fire';
+            veiculo_3.style.color = 'Black';
+            veiculo_3.style.backgroundColor = 'gray';
+            veiculo_3.style.fontSize = '30px';
+            veiculo_3.style.fontFamily = 'Bytesized';
+
+            document.querySelector('#Estacionamento').appendChild(veiculo_3);
+
+            let foto = document.createElement('img');
+            foto.setAttribute('src', 'https://cdn.autopapo.com.br/box/uploads/2020/01/14174308/fiat-uno-grazie_mille-2.jpg');
+        }
+
+        function addVeiculo4(){
+            let veiculo_4 = document.createElement('h1');
+            veiculo_4.innerText = 'Brasília';
+            veiculo_4.style.color = 'Black';
+            veiculo_4.style.backgroundColor = 'yellow';
+            veiculo_4.style.fontSize = '30px';
+            veiculo_4.style.fontFamily = 'Bytesized';
+
+            document.querySelector('#Estacionamento').appendChild(veiculo_4);
+
+            let foto = document.createElement('img');
+            foto.setAttribute('src', 'https://olimpic.com.br/wp-content/uploads/2023/04/olimpic-blog-volks-brasilia_1.jpg');
+        }
+
+
+
+
+
+    </Script>
+</body>
+</html>
