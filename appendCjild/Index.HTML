@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUARTO DOS HORRORES</title>
+</head>
+<body>
+    
+    <img src="./Interruptor_on.png" id="interruptor" onclick="acionarInterruptor()">
+    <img src="./Lampada_on.png" id="lampada" onclick="acionarInterruptor()">
+    <img src="./Ghost.png" id="fantasma" onclick="acionarInterruptor()">
+
+    <Script>
+        let acionado = true;
+        
+        function acionarInterruptor() {
+            let interruptor = document.querySelector('#interruptor');
+            let lampada = document.querySelector('#lampada');
+            let fantasma = document.querySelector('#fantasma');
+            let body = document.querySelector('body');
+
+            lampada.setAttribute('src', './lampada_off.png');
+            
+            
+            if (acionado == true) {
+                interruptor.setAttribute('src', './Interruptor_off.png');
+                lampada.setAttribute('src', './lampada_off.png');
+                fantasma.setAttribute('src', './Ghost.png'); 
+                body.style.backgroundColor = 'Black';
+            }else{
+                interruptor.setAttribute('src', './Interruptor_on.png');
+                lampada.setAttribute('src', './lampada_on.png');
+                body.style.backgroundColor = 'White';
+            }
+            acionado = !acionado;
+        }
+
+
+    </Script>
+            
+
+</body>
+</html>
