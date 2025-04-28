@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarto dos Horrores</title>
+</head>
+<body>
+    
+    <img src="./interruptor_ligado.png" id="interruptor" onclick="acionarInterruptor()">
+    <img src="./lampada_desligada.png" id="lampada" onclick="acionarInterruptor()">
+
+
+    <script>
+        let acionado = true;
+        let body = document.querySelector('body')
+        function acionarInterruptor(){
+            let interruptor = document.querySelector('#interruptor');
+            let lampada = document.querySelector('#lampada')
+            
+            if(acionado == true){
+                interruptor.setAttribute('src', './interruptor_desligado.png');
+                body.style.background='url("./imbatman.jpg")';
+                lampada.setAttribute('src', './lampada_desligada.png');
+            } else{
+                interruptor.setAttribute('src', './interruptor_ligado.png');
+                body.style.background='url("./brucewayer.jpeg")';
+                lampada.setAttribute('src', './lampada_ligada.png');
+                body.style.backgroundColor = 'white';
+            }
+
+            acionado = !acionado;
+        }
+    </script>
+</body>
+</html>
