@@ -1,24 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-       let escola = ["Prof.João","Prof.Maria","Gabriel","Mateus","PAMI","Banco de Dados"];
-       escola.push("Prof Julia");
-       escola.push("Pedro");
-       escola.push("PWII");
+    let escola =[
+      ["Diogo", "Felipe"],
+      ["Alicia", "Gabriel"],
+      ["Programação de Aplicativo Mobile I", "Banco de Dados"]
+    ];
 
-       escola.forEach(valores => {
-        console.log(valores);
-       });
+    escola[0].push("Gabriel");
+    escola[1].push("Ewerton");
+    escola[2].push("Desenvolvimento de Sistemas");
 
-    
+    escola.forEach((grupo, indice) => {
+    if (indice === 0) {
+      document.writeln("<b>Professores:</b><br>");
+    } else if (indice === 1) {
+      document.writeln("<b>Alunos:</b><br>");
+    } else if (indice === 2) {
+      document.writeln("<b>Disciplinas:</b><br>");
+    }
+    grupo.forEach(item => {
+      document.writeln(item + "<br>");
+    });
+    document.writeln("<br>");
+  });
+</script>
 
-    </script>
-    
-</body>
+
+  </body>
 </html>

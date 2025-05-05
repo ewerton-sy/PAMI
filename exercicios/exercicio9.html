@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let personagens = [
+        [" <br> Nome: Peter Paker", "idade: 17", "Peso: 78Kg", "Altura: 1.83m", "Poder: Soltar teia", "Profissão: Héroi","<img src='img/miranha.webp' width='150px'>"],
+        ["Nome: Legolas", "Idade: 2931", "Peso: 75Kg", "Altura: 1.80m", "Poder: Precisão", "Profissão: Arqueiro", "<img src='img/legolas.jpg' width='150px'>"],
+        ["Nome: Gandalf", "idade: 2019", "Peso: 70Kg", "Altura: 1.70m", "Poder: Magia", "Profissão: Mago", "<img src='img/gandalf.jpeg' width='150px'>"]
+      ];
+
+      personagens.push(
+        ["Frodo", "Idade: 50", "Peso: 45Kg", "Altura: 1.22m", "Poder: Resiliência", "Profissão: Portador do Anel", "<img src='img/frodo.webp' width='150px>'"],
+        ["Sam", "Idade: 38", "Peso: 45Kg", "Altura: 1.25m", "Poder: Lealdade", "Profissão: Jardineiro", "<img src='img/sam.jpg' width='150px>'"],
+        ["Gimli", "Idade: 140", "Peso: 100kg", "Altura: 1.35m", "Poder: Força", "Profissão: Guerreiro", "<img src='img/gimli.jpg' width='150px>'"]
+      );
+
+      personagens.splice(2, 1);
+   
+ 
+         personagens.forEach( personagem => {
+         personagem.forEach((subarray) =>{
+             document.writeln(subarray + "<br>" );
+         })
+         document.writeln("<br>");
+     });
+    </script>
+  </body>
+</html>
