@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let acessToken = {
+            email: 'horse@hotmail.com',
+            token: '123123123'
+        }
+        //salvando os dados no navegador 
+        localStorage.setItem('token', JSON.stringify(acessToken)); //Giovanna e Alicia são Incriveis e maravilhosas (broxas) 
+
+        let pessoa ={
+            nome:'Severino',
+            sobrenome: 'Silva',
+            idade: 10,
+            altura: '1,5m',
+            peso: '70kg',
+            telefones: [
+                996999999,
+                997999999,
+                998999999
+            ]
+        }
+
+        localStorage.setItem('pessoa', JSON.stringify(pessoa));
+        localStorage.removeItem('token');
+
+        let aluno = JSON.parse(localStorage.getItem('pessoa')); // recuperando os dados que estão dentro do navegador. 
+        console.log(aluno)
+    </script>
+</body>
+</html>
