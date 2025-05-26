@@ -1,0 +1,21 @@
+<script>
+    let object = [];
+    let nome = prompt("Digite seu primeiro nome:");
+    let sobrenome = prompt("Digite seu Sobrenome:");
+
+    verificacao(nome,sobrenome)
+
+    function verificacao(nome,sobrenome){
+        let caracterNome = nome.length;
+        let caracterSobrenome = nome.length;
+
+        if(caracterNome >= 3 && caracterSobrenome >= 3){
+            object.push({
+                PrimeiroNome: nome,
+                Sobrenome: sobrenome,
+                object: `${nome} ${sobrenome}`
+            })
+            console.log(object)
+        }
+    }
+</script>

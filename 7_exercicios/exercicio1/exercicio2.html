@@ -1,0 +1,19 @@
+<script>
+    let palavra = prompt("Digite uma palavra ou uma frase:");
+    contCaracter(palavra);
+
+
+    function contCaracter(palavra){
+        let QntCaracter = palavra.length;
+        if(QntCaracter<=5){
+            console.log("Poucos Caracteres");
+            exit();
+        }
+        if(QntCaracter>=5 && QntCaracter <=10){
+            console.log("Boa quantidade de caracteres");
+        }
+        else{
+            console.log("Inúmeros caracteres encontrados");
+        }
+    }
+</script>
