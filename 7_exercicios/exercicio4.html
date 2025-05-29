@@ -1,0 +1,16 @@
+<script>
+  let userNumber = prompt("Enter your phone telephone");
+
+  checkPhone(userNumber);
+
+  function checkPhone(phoneNumber) {
+    phoneNumber = phoneNumber.trim().replace(/\D/g, "");
+    console.log(phoneNumber); // Test
+
+    if (phoneNumber.length === 11) {
+      console.log("Valid phone number.");
+    } else {
+      console.log("Invalid phone number: it must have exactly 11 digits.");
+    }
+  }
+</script>

@@ -1,0 +1,11 @@
+<script>
+    let name = prompt("Enter your full name:");
+
+    getInitials(name);
+    
+    function getInitials(fullName) {
+    let words = fullName.split(" ");
+    let initials = words.map(word => word[0].toUpperCase()).join(" "); 
+    console.log(initials);
+}
+</script>
